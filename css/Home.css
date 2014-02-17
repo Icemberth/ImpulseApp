@@ -1,0 +1,144 @@
+h1{
+	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+	font-weight: 300;
+	line-height: 1.1;
+	font-size: 4em;
+	color: #333333;
+	margin: 0 0 5px 0;
+	padding: 5px;
+	border-bottom: 1px solid #59b548;
+}
+section{
+	background: #ececec;
+	text-align: center;
+	padding: 0 0 1em 0;
+}
+section article{	
+	color: #FFF;
+	background-color: #238276;
+	display: inline-block;
+	margin: 0 0 2em 0;
+	padding: .5em;
+	text-align: left;
+	width: 32%;
+}
+section article:hover{
+	background-color: #59b548;
+	cursor: pointer;
+}
+section article h2{
+	border-bottom: solid 1px #FFFFFF;
+	font-size: 2em;
+}
+section article p{
+	text-transform: lowercase;
+	font-size: 1.2em;
+}
+section article span{
+	border-radius: 5px;	
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	background-color: #fff;
+	color: #000;
+	display: block;
+	font-size: 1.1em;
+	margin: 0 0 .5em 0;
+	padding: 5px;
+	text-align: center;
+	width: 30%;
+}
+section article div{
+	padding: 5px;
+	text-align: right;
+}
+section .Sections .Section article{
+	
+}
+.ViewMore{
+	padding: 5px;
+	margin: 0 0 15px 0;
+	text-align: center;	
+}
+.ViewMore span{
+	background-color: #59b548;	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #FFF;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 8px;		
+}
+.ViewMore span:hover{
+	color: #000;
+	cursor: pointer;
+}
+/*INICIO CSS de Configuración de Usuario*/
+
+.Container-Configuration-User{
+	width: 900px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0 0 2em 0;
+	border-bottom: 1px solid #59b548;
+	border-top: 1px solid #59b548;
+}
+.Container-Configuration-User .Propierties{
+	padding: 5px;
+	margin: 5px;
+	border-bottom: 1px solid #91D59C;
+}
+.Container-Configuration-User .Propierties:first-child>div:not(figure){
+	margin: 20px 0 0 0;
+}
+.Container-Configuration-User .Propierties>div:nth-child(1){
+	font-weight: bold;
+	display: inline-block;
+	width: 32.2%;
+	vertical-align: top;
+	font-size: 1.2em;
+	text-align: left;
+}
+.Container-Configuration-User .Propierties>:nth-child(2){	
+	display: inline-block;
+	width: 32.2%;
+	vertical-align: top;
+	font-size: 1.2em;
+	text-align: left;
+}
+.Container-Configuration-User .Propierties>div:nth-child(3){
+	font-weight: bold;
+	color: #fc7323;
+	display: inline-block;
+	width: 32.2%;
+	vertical-align: top;
+	font-size: 1.2em;
+	text-align: right;
+}
+.Container-Configuration-User .Propierties>div:nth-child(3):hover{		
+	color: #000;
+	cursor: pointer;	
+}
+.Container-Configuration-User .Propierties figure{	
+	margin: 0 auto;
+}
+.Container-Configuration-User .Propierties figure img{
+	width: 55px;
+	border-radius: 50%;
+}
+.Container-Configuration-User .Propierties span{
+
+}
+/*FIN CSS de Configuración de Usuario*/
+@media screen and (min-width: 768px){
+	header .titular .publicar{
+		padding-left:3em;
+		position:relative;
+	}
+	header .titular .publicar:before{
+		left:-5px;	
+		font-size:2.5em;
+		position:absolute;
+		top:-5px;
+	}
+}

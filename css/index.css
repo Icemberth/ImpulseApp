@@ -1,0 +1,487 @@
+@font-face {
+	font-family: 'ImpulseIcon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body{
+	margin: 0 auto !important;
+	font-family: "MuseoSans-300", arial, sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+}
+.displaynone{
+	display: none;
+}
+#LogIn{
+	background-color: #fc7323;
+	border: 1px solid #FFF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 0 0 5px 0;
+	position: fixed;
+	width: 400px;
+	z-index: 9;
+}
+#LogIn .Header{
+	background-color: #59b548;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	font-weight: bold;
+	padding: 5px;		
+}
+#LogIn .Header .Text{
+	color: #FFF;
+	display: inline-block;
+	width: 92%;
+}
+#LogIn .Header .Back{
+	display: inline-block;	
+	color: #FFF;
+	cursor: pointer;
+	margin: 0 5px 0 0;
+	width: 2%;
+}
+#LogIn .Header .Back:before{
+	font-family: "ImpulseIcon";
+	font-size: .8em;
+	content: "\e602";
+	text-decoration: none;
+}
+#LogIn .Header .Close{
+	display: inline-block;	
+	color: #FFF;
+	cursor: pointer;
+	width: 2%;
+}
+#LogIn .Content{
+	padding: 5px;
+	margin: 0 0 10px 0;
+}
+#LogIn .Content .Image-User{
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+#LogIn .Content .Image-User figure img{ 
+	width: 100px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+#LogIn .Content .Image-User .BackGround{
+	background-color: #FFF;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	height: 50px;
+	margin: 0 auto;
+	padding: 30px 0 0 0;
+	width: 100px;
+}
+#LogIn .Content .Image-User .BackGround:after{
+	content: "\e607";
+	color: #CECFC7;
+	font-family: "ImpulseIcon";
+	font-size: 4em;	
+	text-decoration: none;
+}
+#LogIn .Content>div>input{
+	border: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin: 0 0 5px 0;
+	padding: 10px;
+	width: 90%;
+}
+#LogIn .SignIn{
+	background-color: #59b548;
+	border: 1px solid #3E7234;	
+	border-bottom-width: 2px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 14.2px;
+	margin: 0 auto;
+	padding: 10px 15px;	
+	text-decoration: none;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	width: 60%;
+	zoom: 1;
+}
+#LogIn .Go-SingIn{	
+	background-color: #238276;
+	border: 1px solid #21635A;	
+	border-bottom-width: 2px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 14.2px;
+	margin: 0 auto;
+	padding: 10px 15px;	
+	text-decoration: none;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	width: 60%;
+	zoom: 1;	
+}
+#LogIn .Footer{
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+}
+#LogIn>div:nth-child(4){
+	font-weight: bold;
+	font-style: italic;	
+	color: #FFF;
+	text-align: center;
+	margin: 5px 0 5px 0;
+}
+#LogIn .Footer a{
+	background-color: #1e62a9;
+	border: 1px solid #143f72;	
+	border-bottom-width: 2px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 14.2px;
+	padding: 10px 15px;	
+	text-decoration: none;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100% ;
+	zoom: 1;	
+}
+#LogIn .Footer a:before{
+	background-color: #4e68b0;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	content: "\e604";
+	display: inline-block;
+	font-family: "ImpulseIcon";
+	height: 20px;
+	line-height: 20px;
+	margin-right: 10px;
+	text-decoration: none;
+	text-align: center;
+	width: 20px;
+	zoom: 1;
+}
+#LogIn .Start{
+	background-color: #FFF;
+	border: 1px solid #CCC;	
+	border-bottom-width: 2px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #000;
+	cursor: pointer;
+	font-size: 14.2px;
+	font-weight: bold;
+	font-style: italic;
+	margin: 0 auto;
+	padding: 10px 15px;	
+	text-align: center;
+	text-decoration: none;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 60% ;
+	zoom: 1;	
+}
+#LogIn .Start>figure{
+	margin: 0 auto;
+	display: inline-block;
+}
+#LogIn .Start>figure>img{
+	width: 25px;
+}
+#LogIn .Start>div{
+	display: inline-block;
+	vertical-align: top;
+	margin: 8px 0 0 0;
+}
+footer{	
+	background:#fc7323;
+	color:rgba(255,255,255,0.5);
+	padding:1em 0;
+	text-align:center;
+	width:100%;
+	position: relative;
+	bottom:0; }
+footer h3{font-size:14px;font-weight:normal;}
+footer h3 strong{display:block}
+footer h3 .mejor:before,footer h3 .mejor:after{content:" - "}
+header{
+	text-align: left;
+	max-width: 1200px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+}
+header .Logo{
+	padding: 5px;
+	margin: 0;
+	display: inline-block;
+	width: 87%;
+}
+header .Logo figure{
+	margin: 0;
+	padding: 0;
+	width: auto;
+	width: 50%;
+	text-align: left;
+}
+header .Logo figure img{
+	margin: 0;
+	padding: 0;
+	width: 200px;
+}
+header .LogIn{
+	display: inline-block;
+	width: auto;
+	vertical-align: top;
+	margin: 1em 0 0 0;
+	padding: 10px;
+	background: #fc7323;
+	font-size: 1.2em;
+	font-weight: bold;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+header .LogIn:hover{
+	color: #FFF;
+	cursor: pointer;
+}
+header .LogIn:after{
+	font-family: "ImpulseIcon";
+	content: "\e607";
+	font-size: 1.4em;
+}
+section{	
+	background: #ececec;
+}
+section a{
+	background: #fafaf9;
+	color: #fc7323;
+	text-decoration: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 4px 8px;
+}
+
+section .Chooser{
+	/*background-color: #B0B6AF;*/	
+	text-align: center;	
+	padding-right: 0;
+	margin: 0 auto;
+	padding: 40px 5px 40px 15px;
+}
+section .Chooser>article{
+	display: inline-block;	
+	position:relative;
+	width: 33%; 
+}
+section .Chooser>article:nth-child(1){
+	background-color: #FC7323;
+}
+section .Chooser>article:nth-child(2){
+	background-color: #59B548;
+	left: -4px;	
+}
+
+section .Chooser>article:nth-child(3){
+	background-color: #238276;
+	left: -8px;	
+}
+section .Chooser>article:nth-child(1):before{
+	border-bottom: 0;
+	border-left:0;
+	border-top:0;
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+}
+section .Chooser>article:nth-child(2):before{
+	border-bottom: 117px solid transparent;
+	border-left:   30px solid #FC7323;
+	border-top:    117px solid transparent;
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+}
+section .Chooser>article:nth-child(3):before{
+	border-bottom: 117px solid transparent;
+	border-left:   30px solid #59B548;
+	border-top:    117px solid transparent;
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+}
+section .Chooser>article>div{	
+	margin: 50px 0 0 0;	
+}
+section .Chooser>article>div.First:before{
+	font-family: "ImpulseIcon";
+	content: "\e604";
+	font-size: 6em;
+	padding: 50px 0 0 0;
+	margin: 50px 0 0 :;
+}
+section .Chooser>article>div.Second:before{
+	font-family: "ImpulseIcon";
+	content: "\e601";
+	font-size: 6em;
+	padding: 50px 0 0 0;
+	margin: 50px 0 0 :;
+}
+section .Chooser>article>div.Third:before{
+	font-family: "ImpulseIcon";
+	content: "\e600";
+	font-size: 6em;
+	padding: 50px 0 0 0;
+	margin: 50px 0 0 :;
+}
+section .Chooser article h2{
+	padding: 0 0;
+	font-size: 20px;
+	font-style: normal;
+}
+section .Chooser article p{
+	font-weight: 300;
+	font-size: 1.25em;
+	text-transform: none;
+	margin-top: 1em;
+	padding: 0 0 0 10px;
+}
+
+section .Notifications{
+
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 1px solid #59b548;
+	padding: 40px 20px 40px 20px;
+}
+section .Notifications .Notifications-Content{
+	padding: 0;
+	margin:  0;
+	display: inline-block;
+	width: 83%;
+}
+section .Notifications .Notifications-Icon{
+	display: inline-block;
+	width: 10%;
+	padding: 0;
+	margin: 0 0 0 5%;
+}
+section .Notifications .Notifications-Icon:after{
+	font-family: "ImpulseIcon";
+	content: "\e609";
+	font-size: 6em;
+	color: 	#59b548;
+}
+section .Notifications .Notifications-Content h3{
+	color: #59b548;
+}
+section .Notifications .Notifications-Content p{
+	margin: 0;
+padding: 0;
+border: 0;
+font: inherit;
+font-size: 100%;
+vertical-align: baseline;
+}
+section .Ticker{
+	background: #59b548;
+}
+section .Ticker .Ticker-Content{
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	font-size: .9em;
+	font-weight: bold;
+	text-align: center;
+}
+@media only screen and (max-width: 320px){
+	header .Logo figure{
+		margin: 0 auto;
+		text-align: center;
+	}
+	header .LogIn{
+		display: block;
+		width: 100%;
+		text-align: center;
+		vertical-align: top;
+		margin: 1em 0 2em 0;
+		padding: 10px;
+		background: #fc7323;
+		font-size: 1.2em;
+		font-weight: bold;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+	}
+	article .Notifications .Notifications-Content{
+		display: block;
+		text-align: center;
+		width: 100%;
+	}
+	article .Notifications .Notifications-Icon{
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	article .Notifications .Notifications-Icon:after{
+		font-family: "ImpulseIcon";
+		content: "\e609";
+		font-size: 4em;
+		color: 	#59b548;
+		text-align: center; 
+	}
+	article .Chooser .Chooser-Unit{
+		display: block;
+		width: auto; 
+		margin:  0 0 5em 0;
+	}
+	article .Chooser .Chooser-Unit-One:before{
+		font-family: "ImpulseIcon";
+		content: "\e604";
+		font-size: 4em;
+	}
+	article .Chooser .Chooser-Unit-Two:before{
+		font-family: "ImpulseIcon";
+		content: "\e601";
+		font-size: 4em;
+	}
+	article .Chooser .Chooser-Unit-Three:before{
+		font-family: "ImpulseIcon";
+		content: "\e600";
+		font-size: 4em;
+	}
+}

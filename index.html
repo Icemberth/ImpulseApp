@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en-EN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Impulse | index</title>	
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+	 <div id="fb-root"></div>	 
+	<div id="LogIn" class="displaynone">
+		<div class="Header">
+			<div class="Text">Ingresar</div>
+			<div class="Back"></div>
+			<div class="Close">x</div>
+		</div>
+		<div class="Content">
+			<div class="Image-User">
+				<div class="BackGround">
+					
+				</div>
+			</div>
+			<div>
+				<input type="text" id="User"  name="User" placeholder="Usuario">
+			</div>
+			<div>
+				<input type="password" id="Password"  name="Password" placeholder="Contraseña">
+			</div>
+			<div>
+				<input type="email" id="email" name="email" placeholder="Correo">
+			</div>
+		</div>
+		<div class="SignIn">Registrate</div>
+		<div class="Texto">O Si Prefieres</div>
+		<div class="Go-SingIn">Registrame!</div>
+		<div class="Start displaynone">
+			<figure>
+				<img src="images/logo.png" alt="">
+			</figure>
+			<div class="Go">Empecemos!</div>
+		</div>
+		<div class="Footer">		
+			<a href="#" class="LogIn-Facebook">Entra Con
+				<strong>FACEBOOK</strong>
+			</a>						
+		</div>
+	</div>
+	<header>
+		<div class="Logo">
+			<figure><img src="images/Splash2.png" alt="Impulse"></figure>
+		</div>
+		<div class="LogIn">Ingresa</div>
+	</header>
+	<section>
+		<div class="Ticker">
+			<div class="Ticker-Content">
+				La versión actual es 3.6.7, lanzado el 9 de diciembre de 2013. Echa un vistazo a las notas de la versión para obtener más detalles.
+			</div>
+		</div>
+		<div class="Chooser">
+			<article>
+				<div class="First"></div>
+				<h2><a href="#">Registrar</a></h2>
+				<p>A simple gem install nanoc will get you going, but we’ve provided detailed instructions for those who are unfamiliar with Ruby.</p>
+			</article>
+			<article>
+				<div class="Second"></div>
+				<h2><a href="#">Publicar</a></h2>
+				<p>This ten-minute tutorial will show you how nanoc works, and teach you the basics — enough to get a small web site up and running.</p>
+			</article>
+			<article>
+				<div class="Third"></div>
+				<h2><a href="#">Participar</a></h2>
+				<p>This ten-minute tutorial will show you how nanoc works, and teach you the basics — enough to get a small web site up and running.</p>
+			</article>
+		</div>
+		<div class="Notifications">
+			<div class="Notifications-Icon"></div>
+			<div class="Notifications-Content">
+				<h3>nanoc needs your support!</h3>
+				<p>nanoc is, and always will be, provided free of charge. Development is voluntary and happens entirely in free time. If you use nanoc and like it, please consider showing your token of support by making a donation.</p>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<h3 class="powered"><strong>Power By Impulse</strong></h3>
+		<span class="mejor">COPYRIGHT © 2014 Impulse. Prohibida su reproducción total o parcial, así como su traducción a cualquier idioma sin autorización escrita de su titular.</span>
+	</footer>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/ImpulseFunctions.js"></script>
+<script type="text/javascript" src="js/jquery.md5.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".Go-SingIn").hide("fast");		
+		$("#email").hide("fast");	
+		$(".Back").hide("slow");		
+		$.ajaxSetup({ cache: true });
+  		$.getScript('//www.connect.facebook.net/es_ES/all.js', function(){
+    			FB.init({
+      				appId: '282458198574702',
+    			});         			 
+    			FB.Event.subscribe('auth.authResponseChange', function(response) {
+    				if (response.status === 'connected') {
+      					console.log('Logged in');
+      					FB.api('/me?fields=id,name,picture', function(response) {
+            						console.log(response);            					
+          						});		
+    				} else {
+    	  				FB.login();
+	    			}
+  				});
+  			});
+		$(".LogIn").on("click",function(){
+			$("#LogIn").removeClass("displaynone");
+			$("#LogIn").css("left",$(document).width()/2-200);
+		});
+		$(".Close").on("click",function(){
+			$("#LogIn").addClass("displaynone");
+		});
+		$(".SignIn").on("click",function(){
+			$(".Go-SingIn").show("slow");
+			$("#email").show("slow");
+			$("#LogIn").find(".SignIn").addClass("displaynone");
+			$("#LogIn").find(".Texto").addClass("displaynone");
+			$("#LogIn").find(".Text").html("Registrarme");
+			$(".Back").show("slow");	
+		});
+		$(".Back").on("click",function(){
+			$(".Go-SingIn").hide("slow");
+			$("#email").hide("slow");
+			$("#LogIn").find(".SignIn").removeClass("displaynone");
+			$("#LogIn").find(".Texto").removeClass("displaynone");
+			$("#LogIn").find(".Text").html("Ingresar");
+			$(".Back").hide("slow");	
+		});
+		$(".Go-SingIn").on("click",function(){
+			$(".Start").removeClass("displaynone");            			
+            			$("#User").attr("disabled","true");
+            			$("#Password").attr("disabled","true");
+		});
+		$(".LogIn-Facebook").on("click",function(){
+			FB.login();
+			FB.Event.subscribe('auth.authResponseChange', function(response) {
+    			if (response.status === 'connected') {
+      				FB.api('/me?fields=id,name,picture', function(response) {
+            			console.log(response); 
+            			$(".Image-User").empty();
+            			$(".Image-User").append('<figure><img id="Profile-Picture" src="'+response.picture.data.url+'" alt=""></figure>');
+            			$("#User").val(response.name);
+            			$("#Password").val($.md5(response.id));
+            			$("#LogIn").find(".SignIn").remove();
+            			$("#LogIn").find(".Texto").remove();
+            			$("#LogIn").find(".Footer").remove();
+            			$(".Start").removeClass("displaynone");            			
+            			$("#User").attr("disabled","true");
+            			$("#Password").attr("disabled","true");
+          			});
+    			} else {
+      				FB.login();
+    			}
+  			});		
+		});		
+		// $(".LogIn-Facebook").on("click",function(){
+		// 		$.ajax({
+  //   				url: '//connect.facebook.net/es_ES/all.js',
+  //   				dataType: 'script',
+  //   				cache: true,
+  //   				success: function() {
+  //     					FB.init({
+  //       					appId: '282458198574702',
+  //       					xfbml: true
+  //     					});
+  //     					FB.Event.subscribe('auth.authResponseChange', function(response) {
+  //       					if (response && response.status == 'connected') {
+  //         						FB.api('/me', function(response) {
+  //           						console.log(response);            			         		
+  //         						});
+  //       					}
+  //     					});
+  //   				}
+  // 				});
+		// });
+	});
+</script>
+</body>
+</html>

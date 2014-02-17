@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Impulse | Home</title>
+	<link rel="stylesheet" href="css/Standard.css">
+	<link rel="stylesheet" href="css/Home.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/Style-Load-Bar.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/ImpulseFunctions.js"></script>
+</head>
+<body>
+	<header>		
+		<div class="logo"> 
+			<img src="images/Logo.png" alt="">	
+		</div> 
+		<div class="titular">
+			<div>
+				<a href="#" class="filtro">
+					Bienvenido <strong>Icemberth</strong>
+				</a>
+				<a href="#" class="publicar">	
+					publicar
+				</a>
+			</div>			
+		</div>
+		<div class="usuario">
+			<figure class="avatar">				
+				<img src="images/avatar.jpg" alt="freddier">
+			</figure>
+			<a href="#" class="flechita"></a>			
+		</div>
+		<div class="Options-User displaynone">
+			<div class="nav">
+				<ul>
+					<li><a id="Configuration-User" href="#">Opciones de configuración</a></li>	
+					<li>registro de actividades</li>
+					<li>Ayuda</li>
+					<li>Salir</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<nav>
+		<ul class="menu">
+			<li><a class="option" Text="Preguntas Frecuentes" href="#">Preguntas Frecuentes</a></li>
+			<li><a class="option" Text="Logística" href="#">Logística</a></li>
+			<li><a class="option" Text="Mercadeo" href="#">Mercadeo</a></li>
+			<li><a class="option" Text="Nuevas Tecnologías" href="#">Nuevas Tecnologías</a></li>
+			<li><a class="option" Text="Teleinformática" href="#">Teleinformática</a></li>
+			<li><a class="option" Text="Especializaciones" href="#">Especializaciones</a></li>
+		</ul>
+	</nav>
+	<section id="Section">
+		<h1>Nuevas Preguntas</h1>
+		<article>
+			<h2>Inscripción</h2>
+			<p>LOREM IPSUM ES SIMPLEMENTE EL TEXTO DE RELLENO DE LAS IMPRENTAS Y ARCHIVOS DE TEXTO...</p>
+			<span>Preguntas Frecuentes</span>
+			<div>Hace unos Segundos.</div>
+		</article>
+		<article>
+			<h2>Horarios</h2>
+			<p>Ey Hola que tal, alguno sabe cuando publicarán horarios del trimestre 1 del año 2014...</p>
+			<span>Teleinformática</span>
+			<div>Hace 8 Minutos.</div>
+		</article>
+		<article>
+			<h2>Asistencia día Miercoles</h2>
+			<p>Chicos una pregunta, alguien sabe si el día Miercoles hay marcha? o simplemente no hay cla...</p>
+			<span>Mercadeo</span>
+			<div>Hace 20 Minutos.</div>
+		</article>
+		<article>
+			<h2>Inquietud Solicitud Caprendizaje</h2>
+			<p>Chicos una pregunta, alguien sabe si el día Miercoles hay marcha? o simplemente no hay cla...</p>
+			<span>Nuevas Tecnologías</span>
+			<div>Hace Más De Una Hora.</div>
+		</article>
+		<article>
+			<h2>Novena Navideña</h2>
+			<p>LOREM IPSUM ES SIMPLEMENTE EL TEXTO DE RELLENO DE LAS IMPRENTAS Y ARCHIVOS DE TEXTO...</p>
+			<span>Logística</span>
+			<div>Ayer a las 7:40pm</div>
+		</article>
+		<article>
+			<h2>Gimnasio</h2>
+			<p>Ey Hola que tal, alguno sabe cuando publicarán horarios del trimestre 1 del año 2014...</p>
+			<span>Especializaciones</span>
+			<div> Febrero 1 a las 5:58pm.</div>
+		</article>		
+	<div class="ViewMore"><span>Ver Más Preguntas...</span></div>
+	</section>
+	<footer>
+		<h3 class="powered"><strong>Power By Impulse</strong></h3>
+		<span class="mejor">COPYRIGHT © 2014 Impulse. Prohibida su reproducción total o parcial, así como su traducción a cualquier idioma sin autorización escrita de su titular.</span>
+	</footer>
+<script type="text/javascript">
+	$(function(){				
+		ImpulseSubMenu();		
+		$("#Configuration-User").on("click",function(){			
+			$(".Options-User").addClass("displaynone");
+			$.ajax({
+				dataType: "html",
+       			url: "Configuration-User.html",        		
+        		beforeSend: function(objeto){
+					$("#Section").empty();					
+            		$("#Section").append('<div class="progress-bar red stripes"><span style="width: 100%"></span></div>');
+					$(".progress-bar").css("margin","0 auto 2em auto ");
+            		$("h1").remove();
+        		},
+        		error: function(objeto, quepaso, otroobj){         
+        		},
+        		complete: function(objeto, exito,datos){              
+        		$(".progress-bar").remove();
+            		if(exito=="success"){                		
+            		}
+        		},
+        		success: function(datos){       			
+       				$("#Section").append(datos);
+      			}
+			});
+		});				
+	});
+</script>
+</body>
+</html>
